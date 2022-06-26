@@ -1,0 +1,190 @@
+{% extends "app/layout.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+
+<div class="section">
+    <div class="container">
+        <h1 class="section-caption text-center">Отзывы наших клиентов</h1>
+        <div class="section-subcaption section-mininterval text-center">Лидеры рынка о работе с SeeAll</div>
+    </div>
+    <div class="container">
+        <div class="list-zebra">
+            <div class="customer">
+                <div class="row">
+                    <div class="col-sm-3 customer__company-logo-wrapper hidden-xs">
+                        <img src="{% static 'images/5.jpg' %}" alt="B&amp;H Photo Video, Нью-Йорк, США" class="customer__company-logo customer__company-logo--bh">
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="customer__text">
+                            «Сервис SeeAll стал прекрасным дополнением к нашему сайту. Интеграция их контента была простой, при этом качество контента высочайшее. Нашим покупателям очень нравятся 3D-обзоры SeeAll. Эффект присутствия позволяет покупателю почувствовать, что он держит товар в руках, и даёт возможность изучить каждый дюйм желанного товара.»
+                        </div>
+                        <div class="customer__author">
+                            — Абрахам Перковски, Руководитель службы веб-контента
+                        </div>
+                        <div class="customer__company-name">
+                            B&amp;H Photo Video, Нью-Йорк, США
+                        </div>
+                    </div>
+                    <div class="col-sm-2 customer__avatar-wrapper hidden-xs">
+                        <img src="{% static 'images/13.png' %}" alt="Абрахам Перковски, Руководитель службы веб-контента" class="customer__avatar" width="160" height="160">
+                    </div>
+                </div>
+            </div>                            
+            <div class="customer">
+                <div class="row">
+                    <div class="col-sm-3 customer__company-logo-wrapper hidden-xs">
+                        <img src="{% static 'images/6.svg' %}" alt="Связной, Москва" class="customer__company-logo customer__company-logo--svyaznoy">
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="customer__text">
+                            «Мы проводили А/B-тесты с демонстрацией 3D-обзоров SeeAll в карточках товаров интернет-магазина «Связной». В нашем случае наличие 3D-обзоров дало рост конверсии в среднем на 7%. Причем лучшие результаты показывают товары в ценовых сегментах выше среднего. Нужный сервис, рекомендую!»
+                        </div>
+                        <div class="customer__author">
+                            — Александр Минаев, Главный редактор сайта
+                        </div>
+                        <div class="customer__company-name">
+                            Связной, Москва
+                        </div>
+                    </div>
+                    <div class="col-sm-2 customer__avatar-wrapper hidden-xs">
+                        <img src="{% static 'images/14.png' %}" alt="Александр Минаев, Главный редактор сайта" class="customer__avatar" width="160" height="160">
+                    </div>
+                </div>
+            </div>                            
+            <div class="customer">
+                <div class="row">
+                    <div class="col-sm-3 customer__company-logo-wrapper hidden-xs">
+                        <img src="{% static 'images/7.svg' %}" alt="Компания LG, Москва" class="customer__company-logo customer__company-logo--lg">
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="customer__text">
+                            «С интеграцией 3D-обзоров на сайт повысилась посещаемость, а также среднее время нахождения пользователя в карточке продукта. Прекрасная реализация, простота в установке и удобный личный кабинет. Результатом очень довольны!»
+                        </div>
+                        <div class="customer__author">
+                            — Анна Лямина, Диджитал менеджер продуктового маркетинга
+                        </div>
+                        <div class="customer__company-name">
+                            Компания LG, Москва
+                        </div>
+                    </div>
+                    <div class="col-sm-2 customer__avatar-wrapper hidden-xs">
+                        <img src="{% static 'images/15.png' %}" alt="Анна Лямина, Диджитал менеджер продуктового маркетинга" class="customer__avatar" width="160" height="160">
+                    </div>
+                </div>
+            </div>                            
+            <div class="customer">
+                <div class="row">
+                    <div class="col-sm-3 customer__company-logo-wrapper hidden-xs">
+                        <img src="{% static 'images/8.png' %}" alt="Юлмарт, Санкт-Петербург" class="customer__company-logo customer__company-logo--ulmart">
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="customer__text">
+                            «SeeAll – это качественный графический контент. Удобный интерфейс в личном кабинете на сайте SeeAll позволяет отслеживать количество привязанных 3D-обзоров и статистику просмотров. Сотрудничаем уже около года, и думаем продолжить сотрудничество!»
+                        </div>
+                        <div class="customer__author">
+                            — Генрих Лачинян, Руководитель департамента «Каталогизация»
+                        </div>
+                        <div class="customer__company-name">
+                            Юлмарт, Санкт-Петербург
+                        </div>
+                    </div>
+                    <div class="col-sm-2 customer__avatar-wrapper hidden-xs">
+                        <img src="{% static 'images/16.png' %}" alt="Генрих Лачинян, Руководитель департамента «Каталогизация»" class="customer__avatar" width="160" height="160">
+                    </div>
+                </div>
+            </div>                            
+            <div class="customer">
+                <div class="row">
+                    <div class="col-sm-3 customer__company-logo-wrapper hidden-xs">
+                        <img src="{% static 'images/9.svg' %}" alt="Киевстар, Киев, Украина" class="customer__company-logo customer__company-logo--kievstar">
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="customer__text">
+                            «Идеальное решение для e-commerce проектов с большим количеством товаров:<br>
+                            - Удобная и интуитивно-понятная интеграция;<br>
+                            - Быстрый и качественный support;<br>
+                            - Кастомизация решения под бизнес-требования;<br>
+                            - И просто отличные ребята!»
+                        </div>
+                        <div class="customer__author">
+                            — Александр Сивушенко, Ecommerce Processes Manager
+                        </div>
+                        <div class="customer__company-name">
+                            Киевстар, Киев, Украина
+                        </div>
+                    </div>
+                    <div class="col-sm-2 customer__avatar-wrapper hidden-xs">
+                        <img src="{% static 'images/17.png' %}" alt="Александр Сивушенко, Ecommerce Processes Manager" class="customer__avatar" width="160" height="160">
+                    </div>
+                </div>
+            </div>                            
+            <div class="customer">
+                <div class="row">
+                    <div class="col-sm-3 customer__company-logo-wrapper hidden-xs">
+                        <img src="{% static 'images/10.svg' %}" alt="Техносила, Москва" class="customer__company-logo customer__company-logo--tehnosila">
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="customer__text">
+                            «Обзоры SeeAll позволяют нашим клиентам во всех деталях разглядеть товар – и принять обоснованное решение о покупке. Отличная реализация, простая интеграция, удобное отслеживание статистики – работать с SeeAll очень просто и удобно, рекомендуем!»
+                        </div>
+                        <div class="customer__author">
+                            — Ксения Тихонова, Руководитель отдела контента
+                        </div>
+                        <div class="customer__company-name">
+                            Техносила, Москва
+                        </div>
+                    </div>
+                    <div class="col-sm-2 customer__avatar-wrapper hidden-xs">
+                        <img src="{% static 'images/18.png' %}" alt="Ксения Тихонова, Руководитель отдела контента" class="customer__avatar" width="160" height="160">
+                    </div>
+                </div>
+            </div>                            
+            <div class="customer">
+                <div class="row">
+                    <div class="col-sm-3 customer__company-logo-wrapper hidden-xs">
+                        <img src="{% static 'images/11.svg' %}" alt="Calumet Photographic, Гамбург, Германия" class="customer__company-logo customer__company-logo--calumet">
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="customer__text">
+                            «Интеграция 3D-обзоров SeeAll очень проста, а техническая поддержка великолепна. Плюс ко всему, было здорово иметь возможность бесплатного тестирования!»
+                        </div>
+                        <div class="customer__author">
+                            — Гуннар Асмуссен, Руководитель веб-службы в ЕС
+                        </div>
+                        <div class="customer__company-name">
+                            Calumet Photographic, Гамбург, Германия
+                        </div>
+                    </div>
+                    <div class="col-sm-2 customer__avatar-wrapper hidden-xs">
+                        <img src="{% static 'images/19.png' %}" alt="Гуннар Асмуссен, Руководитель веб-службы в ЕС" class="customer__avatar" width="160" height="160">
+                    </div>
+                </div>
+            </div>                            
+            <div class="customer">
+                <div class="row">
+                    <div class="col-sm-3 customer__company-logo-wrapper hidden-xs">
+                        <img src="{% static 'images/12.png' %}" alt="Ollo Store, Флоренция, Италия" class="customer__company-logo customer__company-logo--ollo">
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="customer__text">
+                            «SeeAll - это решение, которое мы давно искали, и не находили на итальянском рынке. В ближайшие годы 3D-обзоры будут всё больше распространяться среди интернет-магазинов, ведь они позволяют покупателю гораздо лучше "ощутить" товар как на экране компьютера, так и на мобильных устройствах. Интеграция 3D-обзоров в наш интеренет-магазин была очень простой.»
+                        </div>
+                        <div class="customer__author">
+                            — Марко Фаше, Сооснователь и специалист по электронной коммерции
+                        </div>
+                        <div class="customer__company-name">
+                            Ollo Store, Флоренция, Италия
+                        </div>
+                    </div>
+                    <div class="col-sm-2 customer__avatar-wrapper hidden-xs">
+                        <img src="{% static 'images/20.png' %}" alt="Марко Фаше, Сооснователь и специалист по электронной коммерции" class="customer__avatar" width="160" height="160">
+                    </div>
+                </div>
+            </div>                    
+        </div>
+    </div>
+</div>
+
+{% endblock %}

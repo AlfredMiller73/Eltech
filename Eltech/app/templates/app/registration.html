@@ -1,0 +1,19 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="container">
+<h2>Начать 7-дневный пилот</h2>
+<br />
+<h3>Полноценное использование сервиса без оплаты и подписания договора</h3>
+<br /><br />
+    <form method="POST" > {% csrf_token %}
+        <div>
+            {{ regform.as_p}}
+            <br /><br />
+            <button type="submit" class="save btn btn-call2action" > Создать аккаунт </button>
+            <br /><br />
+        </div>
+    </form>
+</div>
+{% endblock %}

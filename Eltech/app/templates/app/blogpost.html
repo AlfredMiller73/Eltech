@@ -1,0 +1,49 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+{% load staticfiles %}
+
+<div class="container">
+    
+    <h2 class="pilot-h5"> {{ post_1.title }} </h2>
+
+    <div class="picture">
+        {% if post_1.image and post_1.image.url != '/media/temp.jpg' %}
+        <img src="{{ post_1.image.url }}" alt="Картинка" />
+        {% endif %}
+    </div>
+    {% autoescape off %}
+    <p style="line-height:27px"> {{ post_1.content|linebreaksbr }} </p> {# вывод текста по абзацам#}
+    {% endautoescape %}
+
+     <!-- Comments Form -->
+    {% if user.is_authenticated %}
+        <div class="card my-4">
+          <h5 class="card-header">Добавить комментарий:</h5>
+          <div class="card-body">
+            <form method="POST">{% csrf_token %}
+              <div class="form-group">
+                <textarea id ="id_text" name ="text" class="form-control" rows="3">{{form.id_text}}</textarea>
+                  <br />
+                  <button type="submit" class="btn btn-default">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    {% else %}
+     <br/> <br/>
+        <h3>Для добавления своего комментария, пожалуйста, <a href="{% url 'login' %}">авторизуйтесь.</a> </h3>
+    {% endif %}
+     <br/> <br/>
+    {% for comment in comments %}
+    <kbd> <h7> {{ comment.author }}&nbsp&nbsp&nbsp{{ comment.date }}</h7> </kbd>
+    <br />
+    <p> <i> {{ comment.text|linebreaksbr }} </i> </p>
+    <hr />
+    {% endfor %}
+
+    <br/> <br/>
+    <a class="btn btn-call2action" href="{% url 'blog' %}">Назад</a>
+     <br/> <br/><br/>
+</div>
+{% endblock %}

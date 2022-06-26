@@ -1,0 +1,106 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+{% load staticfiles %}
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Стоимость
+      <small>Подписки</small>
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'home' %}">Главная</a>
+      </li>
+      <li class="breadcrumb-item active">Цены</li>
+    </ol>
+
+    <br/>
+    <h4>Оплатив годовую лицензию, вы сможете использовать на своём сайте все 3D-обзоры выбранных категорий товаров. Все обновления включены.</h4>
+    <br/> <br/>
+    <!-- Content Row -->
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h3 class="card-header">Мобил</h3>
+          <div class="card-body">
+            <div class="display-4">15.000&#8381</div>
+            <div class="font-italic">в год</div>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">"Мобильная техника"</li>
+            <li class="list-group-item">Все 3D-обзоры из категорий:</li>
+            <li class="list-group-item">
+                <a class="nav-link" href="{% url 'catalog' %}">Телефоны, ноутбуки, планшеты...</a>
+            </li>
+            {% if user.is_authenticated %}
+                <li class="list-group-item">
+                    <a class="btn btn-primary" href="{% url 'catalog' %}">Выбрать</a>
+                </li>
+           {% endif %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card card-outline-primary h-100">
+          <h3 class="card-header bg-primary text-white">Объектив</h3>
+          <div class="card-body">
+            <div class="display-4">20.000&#8381</div>
+            <div class="font-italic">в год</div>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">"Фототехника"</li>
+            <li class="list-group-item">Все 3D-обзоры из категорий:</li>
+            <li class="list-group-item">
+                <a class="nav-link" href="{% url 'catalog' %}">Камеры, вспышки, объективы...</a>
+            </li>
+            {% if user.is_authenticated %}
+                <li class="list-group-item">
+                    <a class="btn btn-primary" href="{% url 'catalog' %}">Выбрать</a>
+                </li>
+           {% endif %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h3 class="card-header">Полный</h3>
+          <div class="card-body">
+            <div class="display-4">30.000&#x20bd</div>
+            <div class="font-italic">в год</div>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">"Все 3D-обзоры без ограничений"</li>
+            <li class="list-group-item">Все 3D-обзоры из категорий:</li>
+            <li class="list-group-item">
+                <a class="nav-link" href="{% url 'catalog' %}">Посмотреть полный каталог</a>
+            </li>
+            {% if user.is_authenticated %}
+                <li class="list-group-item">
+                    <a class="btn btn-primary" href="{% url 'catalog' %}">Выбрать</a>
+                </li>
+           {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+
+ <div class="call2action-gray">
+        <div class="container">
+            <div class="section-prices">
+                <div class="section-caption text-center">Будем рады сотрудничеству!</div>
+                <div class="section-subcaption section-mininterval text-center">Начните с полноценной 7-дневной эксплуатации без оплаты.</div>
+                <div class="text-center">
+                    <a class="btn btn-big btn-call2action" href="{% url 'registration' %}">Начать пилот</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

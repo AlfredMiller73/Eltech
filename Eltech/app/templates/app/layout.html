@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <title>{{ title }}</title>
+
+  {% load staticfiles %}
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'app/temp/vendor/bootstrap/css/bootstrap.min.css' %}" />
+
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" type="text/css" href="{% static 'app/temp/css/modern-business.css' %}" />
+
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="{% static 'images/21.png' %}"/></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">О нас</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'catalog' %}">Каталог</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'reviews' %}">Отзывы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">Связаться</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'blog' %}">Обзоры</a>
+          </li>
+            {% if not user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'registration' %}">Регистрация</a>
+            </li>
+            {% endif %}
+            {% include 'app/loginpartial.html' %}
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'card' %}">Корзина</a>
+          </li>
+          {% if user.is_superuser %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'newpost' %}">Добавить обзор</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+{% block content %}{% endblock %}
+
+     <!-- Footer -->
+  <footer class="footer_wrapper" id="contact">
+    <div class="container">
+      <section class="page_section contact" id="contact">
+            <div class="contact_section">
+                <h2 style="color: #007bff">Связаться с нами</h2>
+                <h4>Есть вопросы, предложения? Сообщите нам об этом!</h4>
+            </div>
+        <div class="row">
+            <div class="col-lg-4 wow fadeInLeft">
+                <div class="contact_info">
+                    <div class="detail">
+                        <h4>Адрес</h4>
+                        <p>Псков, Ротная 5</p>
+                    </div>
+                    <div class="detail">
+                        <h4>Телефон:</h4>
+                        <p>+7 777 777 77 77</p>
+                    </div>
+                    <div class="detail">
+                        <h4>Эл. почта:</h4>
+                        <p>sales@btech.ru</p>
+                    </div>
+                </div>
+                <ul class="social_links">
+                    <li class="twitter animated bounceIn wow delay-02s"><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+                    <li class="facebook animated bounceIn wow delay-03s"><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+                    <li class="pinterest animated bounceIn wow delay-04s"><a href="javascript:void(0)"><i class="fa fa-pinterest"></i></a></li>
+                    <li class="gplus animated bounceIn wow delay-05s"><a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-8 wow fadeInLeft delay-06s">
+                <!--NOTE: Update your email Id in "contact_me.php" file in order to receive emails from your contact form-->
+                <form name="sentMessage" id="contactForm"  novalidate="novalidate">
+                    <div class="control-group">
+                        <div class="controls">
+                            <input type="text" class="form-control" placeholder="ФИО" id="name" required data-validation-required-message="Пожалуста введите ваше Имя" />
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <input type="email" class="form-control" placeholder="Электронная почта" id="email" required data-validation-required-message="Пожалуста введите вашу электронную почту" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <textarea rows="10" cols="100" class="form-control" placeholder="Сообщение" id="message" required data-validation-required-message="Пожалуста введите ваше сообщение" minlength="5" data-validation-minlength-message="Min 5 characters" maxlength="999" style="resize:none"></textarea>
+                        </div>
+                    </div>
+                    <div id="success"> </div> <!-- For success/fail messages --><br />
+                    <button type="submit" class="btn btn-primary pull-right">Отправить</button><br />
+                </form>
+            </div>
+        </div>
+    </section>
+   </div>
+    <div class="footer_bottom"><span>&reg; 2022 Все права защищены.</span> </div>
+</footer>
+<!-- //footer 14 -->
+
+
+  <!-- Bootstrap core JavaScript -->
+
+
+
+  <script src="{% static 'app/temp/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'app/temp/js/js-modal-viewer.js' %}"></script>
+  <script src="https://use.fontawesome.com/df966d76e1.js"></script>
+  <script src="{% static 'app/temp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'app/temp/js/ActiveLink.js' %}"></script>
+  <script src="{% static 'app/temp/js/jqBootstrapValidation.js' %}"></script>
+  <script src="{% static 'app/temp/js/contact_me.js' %}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

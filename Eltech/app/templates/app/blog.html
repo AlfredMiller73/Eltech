@@ -1,0 +1,49 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+{% load staticfiles %}
+
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Блог</h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'home' %}">Главная</a>
+      </li>
+      <li class="breadcrumb-item active">Все статьи</li>
+    </ol>
+
+    {% for post in posts %}
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-6">
+              <img class="img-fluid rounded" src="{{ post.image.url }}" alt="" />
+          </div>
+          <div class="col-lg-6">
+            <h4 class="card-title">{{ post.title }}</h4>
+            <p class="card-text" style="line-height:27px">{{post.description}}</p>
+            <a href="{% url 'blogpost' parametr=post.id %}"> Читать далее &rarr;</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-muted">
+        Опубликована {{ post.posted }}
+      </div>
+    </div>
+    {% endfor %}
+
+    <!-- Pagination -->
+    <ul class="pagination justify-content-center mb-4">
+      <li class="page-item">
+        <a class="page-link" href="#">&larr; Предыдущие</a>
+      </li>
+      <li class="page-item disabled">
+        <a class="page-link" href="#">Следующие &rarr;</a>
+      </li>
+    </ul>
+</div>
+{% endblock %}
+

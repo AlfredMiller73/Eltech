@@ -1,0 +1,267 @@
+﻿{% extends "app/layout.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="container">
+    <br />
+    <div class="row" style="margin-bottom:3rem">
+        <div class="col-lg-8 mb-4">
+            <div class="carousel slide" data-ride="carousel" data-interval="10000">
+                <!--<ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>-->
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <iframe width="700px" height="500px" allowfullscreen="true" src="//reviewthree.com/embed/10269"></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe width="700px" height="500px" allowfullscreen="true" src="//reviewthree.com/embed/9979"></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe width="700px" height="500px" allowfullscreen="true" src="//reviewthree.com/embed/9962"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <div class="col-lg-4 mb-5">
+        <h1 class="pilot-h1-h3">Попробуйте</h1>
+        <h3 class="pilot-h1-h3">бесплатно в течение недели</h3>
+        <h5 class="pilot-h5">Отличайтесь от конкурентов, используя 3D-обзоры SeeAll</h5>
+        <a class="btn btn-lg btn-intro pilot-a" href="{% url 'registration' %}">Начать пилот</a>
+      </div>
+    </div>
+
+
+
+</div>
+<section class="section-base" style="background: #eaeaea">
+    <div class="container">
+        <h2 class="section-caption text-center">Все новинки электроники в 3D</h2>
+        <div class="section-subcaption section-midinterval text-center">Нажмите на изображение, чтобы увидеть пример</div>
+        <div class="row">
+                            <a href="#" data-target="#example-10269" class="col-md-4 col-sm-4 productwidget text-center js-modal-viewer">
+                    <div class="productwidget-image">
+                        <img src="http://reviewthree.com/img/overview/examples/10269.png" class="img-responsive" alt="3D-обзор Apple iPhone X Silver">
+                    </div>
+                    <div class="productwidget-caption">
+                        3D-обзор Apple iPhone X Silver
+                    </div>
+                </a>
+                            <a href="#" data-target="#example-9979" class="col-md-4 col-sm-4 productwidget text-center js-modal-viewer">
+                    <div class="productwidget-image">
+                        <img src="http://reviewthree.com/img/overview/examples/9979.png" class="img-responsive" alt="3D-обзор Samsung Gear S3 Frontier">
+                    </div>
+                    <div class="productwidget-caption">
+                        3D-обзор Samsung Gear S3 Frontier
+                    </div>
+                </a>
+                            <a href="#" data-target="#example-9962" class="col-md-4 col-sm-4 productwidget text-center js-modal-viewer">
+                    <div class="productwidget-image">
+                        <img src="http://reviewthree.com/img/overview/examples/9962.png" class="img-responsive" alt="3D-обзор Sony Alpha A9 Kit Zeiss Batis 25mm 2.0">
+                    </div>
+                    <div class="productwidget-caption">
+                        3D-обзор Sony Alpha A9 Kit Zeiss Batis 25mm 2.0
+                    </div>
+                </a>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="productwidget-readmore text-center">
+                    <a href="{% url 'catalog' %}" class="btn btn-dotted btn-blue btn-md">
+                        ... и еще тысячи таких 3D-обзоров в нашем Каталоге
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXAMPlE MODALS START -->
+    <script type="text/template" id="modal-viewer-template">
+        <div class="modal-dialog-viewer-inner">
+            <div class="player-modal-wrapper">
+                <iframe allowfullscreen="true" src="<%= src %>"></iframe>
+            </div>
+        </div>
+    </script>
+
+        <div class="modal modal-viewer" id="example-10269">
+        <div class="modal-dialog modal-dialog-viewer" data-src="//reviewthree.com/embed/10269"></div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+        <div class="modal modal-viewer" id="example-9979">
+        <div class="modal-dialog modal-dialog-viewer" data-src="//reviewthree.com/embed/9979"></div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+        <div class="modal modal-viewer" id="example-9962">
+        <div class="modal-dialog modal-dialog-viewer" data-src="//reviewthree.com/embed/9962"></div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+        <!-- EXAMPLE MODALS ENDS -->
+
+<div class="container">
+
+
+
+
+
+    <section class="section-about">
+    <h2 class="section-caption text-center">
+        Hi-End в мире контента
+    </h2>
+    <div class="section-subcaption section-interval text-center">
+        Мы предлагаем лучшее для лидеров. Узнайте больше.
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 col-sm-4 introwidget text-center">
+
+            <div class="introwidget-image lg" data-mh="home-introwidget-icon" style="height: 120px;">
+                <!-- icon path: /img/overview/be-different.svg-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="85px" height="98px" viewBox="0 0 85 98" version="1.1" class="svg">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Custom-Preset-2" transform="translate(-33.000000, -15.000000)">
+            <g id="Group-3" transform="translate(33.000000, 16.000000)">
+                <polygon class="f1" id="Path" fill="#000000" points="0 71.7657654 28.6587826 61 36.8413497 86.1545505 39.0578561 64.021335 42.3864893 64.021335 42.3864893 96.0801955 0 96.0801955"></polygon>
+                <polygon class="f1" id="Path" fill="#000000" transform="translate(63.193245, 78.540098) scale(-1, 1) translate(-63.193245, -78.540098) " points="42 71.7657654 70.6587826 61 78.8413497 86.1545505 81.0578561 64.021335 84.3864893 64.021335 84.3864893 96.0801955 42 96.0801955"></polygon>
+                <g class="s1" id="Group" transform="translate(19.000000, 0.000000)" stroke="#000000" stroke-width="3">
+                    <path d="M13.8767238,49.5644808 L6.10842033,37.5986731 C0.0194164512,27.2361415 -0.635492085,18.4234456 4.14369472,11.1605853 C9.41178816,4.32090954 15.9608735,0.931411101 23.7909508,0.992089995" id="Path-2"></path>
+                    <path d="M35.6850953,49.5644808 L27.9167919,37.5986731 C21.827788,27.2361415 21.1728795,18.4234456 25.9520663,11.1605853 C31.2201597,4.32090954 37.7692451,0.931411101 45.5993224,0.992089995" id="Path-2" transform="translate(34.199492, 25.277885) scale(-1, 1) translate(-34.199492, -25.277885) "></path>
+                </g>
+                <polygon class="f1" id="Rectangle" fill="#000000" points="31 48 53 48 53 57 31 57"></polygon>
+                <g id="Group-2" transform="translate(33.000000, 15.000000)">
+                    <path class="s1" d="M0,2 L5.9221304,20.8739561" id="Path-3" stroke="#000000" stroke-width="3"></path>
+                    <path class="s1" d="M14,2 L19.9221304,20.8739561" id="Path-3" stroke="#000000" stroke-width="3" transform="translate(16.961065, 11.436978) scale(-1, 1) translate(-16.961065, -11.436978) "></path>
+                    <polyline class="s1" id="Path-4" stroke="#000000" stroke-width="3" points="2 6.75276011 10.0783047 5 18.4195586 6.75276011"></polyline>
+                    <rect class="f1" id="Rectangle-2" fill="#000000" x="8" y="0" width="4.01786882" height="12"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+            </div>
+
+            <div class="introwidget-caption" data-mh="home-introwidget-caption" style="height: 34px;">
+                Отличайтесь от конкурентов
+            </div>
+
+            <div class="introwidget-desc" data-mh="home-introwidget-desc" style="height: 112px;">
+                <p>Используйте контент будущего, и покупатели запомнят ваш интернет-магазин. 3D-обзоры помогают удержать покупателя на товарной странице.</p>
+            </div>
+
+            <div class="introwidget-readmore">
+                <a href="{% url 'reviews' %}" class="btn btn-bordered btn-blue">
+                    Узнать больше
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 introwidget text-center">
+
+            <div class="introwidget-image lg" data-mh="home-introwidget-icon" style="height: 120px;">
+                <!-- icon path: /img/overview/all-electronics.svg-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="191px" height="102px" viewBox="0 0 191 102" version="1.1" class="svg">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill-rule="nonzero" fill="#000000">
+            <g id="iconmonstr-star-1" transform="translate(48.000000, 85.000000)">
+                <polygon class="f1" id="Shape" points="8.60237042 0.20645689 10.6332467 6.456079 17.2047408 6.456079 11.8877591 10.3192602 13.9186353 16.5688823 8.60237042 12.706418 3.28538864 16.5688823 5.31626492 10.3192602 -3.55271368e-15 6.456079 6.57149414 6.456079"></polygon>
+            </g>
+            <g id="iconmonstr-star-1" transform="translate(70.000000, 85.000000)">
+                <polygon class="f1" id="Shape" points="8.60237042 0.20645689 10.6332467 6.456079 17.2047408 6.456079 11.8877591 10.3192602 13.9186353 16.5688823 8.60237042 12.706418 3.28538864 16.5688823 5.31626492 10.3192602 -3.55271368e-15 6.456079 6.57149414 6.456079"></polygon>
+            </g>
+            <g id="iconmonstr-star-1" transform="translate(92.000000, 85.000000)">
+                <polygon class="f1" id="Shape" points="8.60237042 0.20645689 10.6332467 6.456079 17.2047408 6.456079 11.8877591 10.3192602 13.9186353 16.5688823 8.60237042 12.706418 3.28538864 16.5688823 5.31626492 10.3192602 -3.55271368e-15 6.456079 6.57149414 6.456079"></polygon>
+            </g>
+            <g id="iconmonstr-star-1" transform="translate(114.000000, 85.000000)">
+                <polygon class="f1" id="Shape" points="8.60237042 0.20645689 10.6332467 6.456079 17.2047408 6.456079 11.8877591 10.3192602 13.9186353 16.5688823 8.60237042 12.706418 3.28538864 16.5688823 5.31626492 10.3192602 -3.55271368e-15 6.456079 6.57149414 6.456079"></polygon>
+            </g>
+            <g id="iconmonstr-star-1" transform="translate(136.000000, 85.000000)">
+                <polygon class="f1" id="Shape" points="8.60237042 0.20645689 10.6332467 6.456079 17.2047408 6.456079 11.8877591 10.3192602 13.9186353 16.5688823 8.60237042 12.706418 3.28538864 16.5688823 5.31626492 10.3192602 -3.55271368e-15 6.456079 6.57149414 6.456079"></polygon>
+            </g>
+            <g id="cameras" transform="translate(0.000000, 37.000000)">
+                <path class="f1" d="M0,3 L49,3 L49,32 L0,32 L0,3 Z M24.5,30 C31.4035594,30 37,24.4035594 37,17.5 C37,10.5964406 31.4035594,5 24.5,5 C17.5964406,5 12,10.5964406 12,17.5 C12,24.4035594 17.5964406,30 24.5,30 Z M43.8526883,11.7053766 C45.4281845,11.7053766 46.7053766,10.4281845 46.7053766,8.8526883 C46.7053766,7.27719205 45.4281845,6 43.8526883,6 C42.2771921,6 41,7.27719205 41,8.8526883 C41,10.4281845 42.2771921,11.7053766 43.8526883,11.7053766 Z" id="Combined-Shape"></path>
+                <circle class="f1" id="Oval-3" cx="24.5" cy="17.5" r="6.5"></circle>
+                <rect class="f1" id="Rectangle-5" x="5" y="0" width="8" height="4"></rect>
+            </g>
+            <g id="laptops" transform="translate(59.000000, 0.000000)">
+                <path class="f1" d="M9.17808073,0 L80.3503813,0 L80.3503813,47.2015581 L9.17808073,47.2015581 L9.17808073,0 Z M14.1115535,5.20921447 L14.1115535,41.9514784 L74.9955983,41.9514784 L74.9955983,5.20921447 L14.1115535,5.20921447 Z" id="Combined-Shape"></path>
+                <path class="f1" d="M9.41815449,49.8238668 L80.5875336,49.8238668 L90.4696529,68.1800283 L0,68.1800283 L9.41815449,49.8238668 Z M37.3604823,60.313102 L35.4011685,64.1318416 L54.2220995,64.1318416 L52.1662643,60.313102 L37.3604823,60.313102 Z" id="Combined-Shape"></path>
+            </g>
+            <g id="smartphones" transform="translate(160.000000, 19.403164)">
+                <path class="f1" d="M0,0 L30.5463007,0 L30.5463007,48.8044061 L0,48.8044061 L0,0 Z M3.80585279,7.33111216 L3.80585279,42.408216 L26.80308,42.408216 L26.80308,7.33111216 L3.80585279,7.33111216 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
+            </div>
+
+            <div class="introwidget-caption" data-mh="home-introwidget-caption" style="height: 34px;">
+                Все новинки электроники в 3D
+            </div>
+
+            <div class="introwidget-desc" data-mh="home-introwidget-desc" style="height: 112px;">
+                <p>Смартфоны, планшеты, фотоаппараты, ноутбуки и десятки других категорий. Все ведущие производители.</p>
+            </div>
+
+            <div class="introwidget-readmore">
+                <a href="{% url 'catalog' %}" class="btn btn-bordered btn-blue">
+                    Узнать больше
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 introwidget text-center">
+
+            <div class="introwidget-image lg" data-mh="home-introwidget-icon" style="height: 120px;">
+                <!-- icon path: /img/overview/its-easy.svg-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="143px" height="79px" viewBox="0 0 143 79" version="1.1" class="svg">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <path class="f1" d="M65.095711,56 L65.095711,78.9552055 L42,78.9552055 L42,73 C41.9956538,72.8344194 42,72.6677173 42,72.5 C42,67.2532949 37.7467051,63 32.5,63 C27.2532949,63 23,67.2532949 23,72.5 C23,72.6677173 23.0043462,72.8344194 23.0129321,73 L23,78.9552055 L0,78.9552055 L0,56 L6,56 C6.16558057,55.9956538 6.33228273,56 6.5,56 C11.7467051,56 16,51.7467051 16,46.5 C16,41.2532949 11.7467051,37 6.5,37 C6.33228273,37 6.16558057,37.0043462 6,37.0129321 L3.33066907e-16,37 L0,14 L23,14 L23,10 C23.0043462,9.83441943 23,9.66771727 23,9.5 C23,4.25329488 27.2532949,5.68434189e-14 32.5,5.68434189e-14 C37.7467051,5.68434189e-14 42,4.25329488 42,9.5 C42,9.66771727 41.9956538,9.83441943 41.9870679,10 L42,14 L65.095711,14 L65.095711,37 L70,37 C70.1655806,37.0043462 70.3322827,37 70.5,37 C75.7467051,37 80,41.2532949 80,46.5 C80,51.7467051 75.7467051,56 70.5,56 C70.3322827,56 70.1655806,55.9956538 70,55.9870679 L65.095711,56 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+            <path class="s1" d="M126.595711,77.4552055 L128.095711,77.4552055 L126.595711,77.4552055 Z M106.5,77.4552055 L105,77.4552055 L106.5,77.4552055 Z M84.5,74.0204721 C84.5005921,74.0393233 84.501261,74.0559131 84.5020125,74.070406 L84.5,73 L84.5,74.0204721 Z M84.5,77.4552055 L84.5,78.9552055 L84.5,77.4552055 Z M64.5,77.4552055 L63,77.4552055 L64.5,77.4552055 Z M64.5,57.5 L64.5,56 L63,57.5 L64.5,57.5 Z M64.5,35.5038944 L63.0038979,35.5000051 L64.5,37 L64.5,35.5038944 Z M64.5,15.5 L63,15.5 L64.5,15.5 Z M126.595711,15.5 L128.095711,15.5 L126.595711,15.5 Z M126.595711,77.4552055 L106.5,77.4552055 L106.5,74.3948654 L106.487003,72.9860938 C106.495009,72.8857283 106.5,72.6931252 106.5,72.5 C106.5,66.4248678 101.575132,61.5 95.5,61.5 C89.4248678,61.5 84.5,66.4248678 84.5,72.5 C84.5,72.5362408 84.4995437,72.6304427 84.4981086,72.9176917 C84.4973919,73.0745909 84.4973919,73.0745909 84.4967917,73.2412299 C84.4954724,73.6478806 84.4958732,73.889093 84.5,74.0204721 L84.5,77.4552055 L64.5,77.4552055 L64.5,57.5 L67.9765014,57.5 L69.0189512,57.4869482 C69.1142717,57.4950085 69.3068748,57.5 69.5,57.5 C75.5751322,57.5 80.5,52.5751322 80.5,46.5 C80.5,40.4248678 75.5751322,35.5 69.5,35.5 C69.3068748,35.5 69.1142717,35.5049915 68.9223246,35.5149446 L67.9765014,35.5129321 L64.5,35.5038944 L64.5,15.5 L87.5,15.5 L87.5,9.5 C87.5,5.081722 91.081722,1.5 95.5,1.5 C99.918278,1.5 103.5,5.081722 103.5,9.5 C103.5,9.88053704 103.502067,10.1909261 103.507964,10.8482122 C103.519643,12.1499016 103.519643,12.6928146 103.500635,13.3460668 L103.5,14 L103.5,15.5 L126.595711,15.5 L126.595711,38.5 L133.5,38.5 C137.918278,38.5 141.5,42.081722 141.5,46.5 C141.5,50.918278 137.918278,54.5 133.5,54.5 L126.595711,54.5 L126.595711,77.4552055 Z" id="Combined-Shape" stroke="#000000" stroke-width="3"></path>
+        </g>
+    </g>
+</svg>
+            </div>
+
+            <div class="introwidget-caption" data-mh="home-introwidget-caption" style="height: 34px;">
+                С нами легко!
+            </div>
+
+            <div class="introwidget-desc" data-mh="home-introwidget-desc" style="height: 112px;">
+                <p>Установить 3D-обзор не сложнее, чем вставить видео из YouTube. При начале 7-дневного пилота мы найдём 3D-обзоры для ваших товаров сами.</p>
+            </div>
+
+            <div class="introwidget-readmore">
+                <a href="{% url 'about' %}" class="btn btn-bordered btn-blue">
+                    Узнать больше
+                </a>
+            </div>
+
+        </div>
+    </div><!--/.row-->
+</section><!--END SECTION-->
+    </div><!--END CONTAINER-->
+
+<!--CALL2ACTION START-->
+    <div class="call2action-gray">
+        <div class="container">
+            <div class="section-base">
+                <div class="section-caption text-center">Готовы попробовать?</div>
+                <div class="section-subcaption section-mininterval text-center">Начните с полноценной 7-дневной эксплуатации без оплаты.</div>
+                <div class="text-center">
+                    <a class="btn btn-big btn-call2action" href="{% url 'registration' %}">Начать пилот</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--CALL2ACTION END-->
+{% endblock %}
+

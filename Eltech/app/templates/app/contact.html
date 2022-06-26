@@ -1,0 +1,97 @@
+{% extends "app/layout.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">
+      <small>Обратная связь</small>
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'home' %}">Главная</a>
+      </li>
+      <li class="breadcrumb-item active">Связаться</li>
+    </ol>
+
+    <!-- Content Row -->
+    <div class="row">
+      <!-- Map Column -->
+      <div class="col-lg-8 mb-4">
+        <!-- Embedded Google Map -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2124.709465182408!2d28.36167021628314!3d57.82324798115741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46c0194607351acd%3A0xa8ef9b53089d7342!2z0JjQvdC20LXQvdC10YDQvdCw0Y8g0YPQuy4sIDgsINCf0YHQutC-0LIsINCf0YHQutC-0LLRgdC60LDRjyDQvtCx0LsuLCAxODAwMjE!5e0!3m2!1sru!2sru!4v1610442833788!5m2!1sru!2sru" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      </div>
+      <!-- Contact Details Column -->
+      <div class="col-lg-4 mb-4">
+        <h3>Наши Контакты</h3>
+        <p>
+          <strong>Адрес:</strong>
+          <br />Инженерная, д. 8
+          <br>город Псков
+          <br>
+        </p>
+        <p>
+          <strong><abbr title="Phone">Тел.</abbr>:</strong> +7 921 115 24 33
+        </p>
+        <p>
+           <strong><abbr title="Email">Эл. почта</abbr>:</strong>
+          <a href="mailto:seeall@yandex.ru">sales@seeall.pythonanywhere.com
+          </a>
+        </p>
+        <p>
+          <strong><abbr title="Hours">График работы </abbr>:</strong> Пн - Пт: 9:00-18:00 
+        </p>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Contact Form -->
+    <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+    <div class="row">
+      <div class="col-lg-8 mb-4">
+        <h3>Оставьте нам сообщение. <br />Мы обязательно с Вами свяжемся!</h3>
+        <form name="sentMessage" id="contactForm" novalidate>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Полное имя:</label>
+              <input type="text" class="form-control" id="name" required data-validation-required-message="Пожалуйста, введите Ваше имя.">
+              <p class="help-block"></p>
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Телефон:</label>
+              <input type="tel" class="form-control" id="phone" required data-validation-required-message="Пожалуйста, введите Ваш номер телефона.">
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Эл. почта:</label>
+              <input type="email" class="form-control" id="email" required data-validation-required-message="Пожалуйста, введите Вашу эл. почту.">
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Сообщение:</label>
+              <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Пожалуйста, введите Ваше сообщение" maxlength="999" style="resize:none"></textarea>
+            </div>
+          </div>
+          <div id="success"></div>
+          <!-- For success/fail messages -->
+          <button type="submit" class="btn btn-primary" id="sendMessageButton">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <!-- /.row -->
+</div>
+  <!-- /.container -->
+{% endblock %}
+
+
+  
+
+
+
